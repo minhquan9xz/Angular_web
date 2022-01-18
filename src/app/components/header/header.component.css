@@ -1,0 +1,220 @@
+:root {
+    --background-gradient: linear-gradient(30deg, #f39c12 30%, #f1c40f);
+    --gray: #34495e;
+    --darkgray: #2c3e50;
+}
+
+.select select {
+    width: 100%;
+    color: black;
+}
+
+.select {
+    /* Reset Select */
+    appearance: none;
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+    /* Personalize */
+    flex: 1;
+    padding: 0 1em;
+    color: #fff;
+    background-color: var(--darkgray);
+    background-image: none;
+    cursor: pointer;
+}
+
+
+/* Remove IE arrow */
+
+.select::-ms-expand {
+    display: none;
+}
+
+
+/* Custom Select wrapper */
+
+.select {
+    position: relative;
+    display: flex;
+    width: 20em;
+    height: 3em;
+    border-radius: .25em;
+    overflow: hidden;
+}
+
+
+/* Arrow */
+
+.select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1em;
+    background-color: #34495e;
+    transition: .25s all ease;
+    pointer-events: none;
+}
+
+
+/* Transition */
+
+.select:hover::after {
+    color: #f39c12;
+}
+
+
+/* Other styles*/
+
+body {
+    color: #fff;
+    background: var(--background-gradient);
+}
+
+.header-links li {
+    color: white;
+}
+
+.header-links li:hover {
+    cursor: pointer;
+}
+
+.infor-username {
+    color: white;
+}
+
+.infor-username:hover {
+    cursor: pointer;
+}
+
+.infor-logout {
+    width: 50px;
+    height: 20px;
+    display: none;
+}
+
+
+/* body {
+    background: linear-gradient(135deg, rgba(85, 239, 203, 1) 0%, rgba(30, 87, 153, 1) 0%, rgba(85, 239, 203, 1) 0%, rgba(91, 202, 255, 1) 100%);
+    color: #f7f7f7;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    width: 60vw;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+} */
+
+.button {
+    flex: 1 1 auto;
+    padding: 10px;
+    border: 2px solid #f7f7f7;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    transition: .3s;
+    border-radius: 4px;
+}
+
+.button:after {
+    position: absolute;
+    transition: .3s;
+    content: '';
+    width: 0;
+    left: 50%;
+    bottom: 0;
+    height: 3px;
+    background: #f7f7f7;
+}
+
+.button:nth-of-type(2):after {
+    left: 0;
+}
+
+.button:nth-of-type(3):after {
+    right: 0;
+    left: auto;
+}
+
+.button:nth-of-type(4):after {
+    left: 0;
+    bottom: auto;
+    top: -3px;
+    width: 100%;
+}
+
+.button:nth-of-type(5):after {
+    height: 120%;
+    left: -10%;
+    transform: skewX(15deg);
+    z-index: -1;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.button:after {
+    width: 100%;
+    left: 0;
+}
+
+.button:nth-of-type(4):after {
+    top: calc(100% - 3px);
+}
+
+.button:nth-of-type(5) {
+    color: #5bcaff;
+}
+
+.button:nth-of-type(5):after {
+    left: -10%;
+    width: 120%;
+}
+
+.button:nth-of-type(6) {
+    border-radius: 30px;
+}
+
+.button:nth-of-type(6):after {
+    width: 0%;
+}
+
+.button:nth-of-type(7) {
+    transform: scale(1.2);
+}
+
+.button:nth-of-type(7):after {
+    width: 0%;
+}
+
+.button:nth-of-type(8) {
+    box-shadow: inset 0px 0px 0px 3px #f7f7f7;
+}
+
+.button:nth-of-type(8):after {
+    width: 0%;
+}
+
+.button:nth-of-type(9) {
+    box-shadow: 0px 0px 0px 3px #f7f7f7;
+}
+
+.button:nth-of-type(9):after {
+    width: 0%;
+}
+
+.button i {
+    padding-left: 8px;
+    color: white;
+}
